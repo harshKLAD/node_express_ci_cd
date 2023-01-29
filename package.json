@@ -12,4 +12,8 @@
   "dependencies": {
     "express": "^4.18.2"
   }
+  "repository" : { 
+   "type" : "git",
+   "url" : "https://github.com/harshKLAD/node_express_ci_cd.git"
+ }
 }
