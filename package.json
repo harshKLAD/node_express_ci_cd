@@ -1,7 +1,7 @@
 {
   "name": "node_test",
   "version": "1.0.0",
-  "description": "",
+  "description": "...",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
@@ -15,5 +15,5 @@
   "repository" : { 
    "type" : "git",
    "url" : "https://github.com/harshKLAD/node_express_ci_cd.git"
- }
+  }
 }
