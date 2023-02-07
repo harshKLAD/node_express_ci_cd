@@ -8,7 +8,7 @@ pipeline {
     }
 
     stages {
-        stage('Saving build') {
+        stage('Saving build..') {
             steps {
                 echo 'Getting new push from git'
                 git credentialsId: 'github', url: 'https://github.com/harshKLAD/node_express_ci_cd'
