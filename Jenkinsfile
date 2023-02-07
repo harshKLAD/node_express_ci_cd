@@ -20,7 +20,7 @@ pipeline {
                 sh '''
                       rm -rf node_CI_CD*.zip
                       npm install
-                      zip -r node_CI_CD-${BUILD_NUMBER}.zip node_modules app.js package.json Dockerfile
+                      zip -r node_CI_CD-${BUILD_NUMBER}.zip node_modules app.js package.json Dockerfile Jenkinsfile
                    '''
             }
         }
