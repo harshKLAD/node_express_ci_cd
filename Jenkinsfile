@@ -24,9 +24,10 @@ pipeline {
                    '''
             }
         }
-        stage('Deploy') {
+        stage('Zipping Archive') {
             steps {
-                echo 'Deploying....'
+                echo 'Zipping....'
+                archiveArtifacts artifacts: 'node_CI_CD*.zip', followSymlinks: false
             }
         }
     }
