@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'AWS-EC2' },
+    agent { label 'AWS-EC2' }
 
     stages {
         stage('Saving build..') {
