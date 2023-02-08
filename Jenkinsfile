@@ -23,7 +23,7 @@ pipeline {
                 echo 'Zipping....'
                 archiveArtifacts artifacts: 'node_CI_CD*.zip', followSymlinks: false
                 sh '''
-                      sudo cp node_CI_CD-${BUILD_NUMBER}.zip /node_app/
+                      cp node_CI_CD-${BUILD_NUMBER}.zip /node_app/
                    '''
             }
         }
