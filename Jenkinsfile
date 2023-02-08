@@ -1,11 +1,5 @@
 pipeline {
-    agent any
-  
-    environment {
-      gitCredentialId = 'github' //defined in credentials area
-      gitUrl = 'https://github.com/harshKLAD/node_express_ci_cd.git'
-      deployBranch = 'master'
-    }
+    agent { label 'AWS-EC2' },
 
     stages {
         stage('Saving build..') {
@@ -28,6 +22,9 @@ pipeline {
             steps {
                 echo 'Zipping....'
                 archiveArtifacts artifacts: 'node_CI_CD*.zip', followSymlinks: false
+                sh '''
+                      cp node_CI_CD-${BUILD_NUMBER}.zip /
+                   '''
             }
         }
     }
