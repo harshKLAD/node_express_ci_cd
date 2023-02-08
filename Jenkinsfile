@@ -23,7 +23,11 @@ pipeline {
                 echo 'Zipping....'
                 archiveArtifacts artifacts: 'node_CI_CD*.zip', followSymlinks: false
                 sh '''
+                      killall node
+                      rm /node_app/*
                       cp node_CI_CD-${BUILD_NUMBER}.zip /node_app/
+                      rm -r node_CI_CD-${BUILD_NUMBER}.zip
+                      npm start
                    '''
             }
         }
